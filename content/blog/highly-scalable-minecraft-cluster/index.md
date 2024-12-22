@@ -8,6 +8,7 @@ description = "How to build and configure a highly scalable Minecraft server"
 tags = ["kubernetes", "minecraft", "cluster"]
 
 [extra]
+pinned = true
 toc = false
 quick_navigation_buttons = true
 +++
