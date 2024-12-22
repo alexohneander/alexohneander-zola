@@ -1,7 +1,7 @@
-base_url = "https://welpo.github.io/tabi"
-title = "~/tabi"
-description = "tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs."
-author = "welpo"
+base_url = "https://alexohneander.de"
+title = "~/alexohneander"
+description = "I’m Alex Wellnitz, a DevOps architect and software developer. I currently hold the role of DevOps Engineer at Materna, where I assist developers in accelerating web performance and provide guidance on various topics such as web development, Kubernetes, network security, and more."
+author = "Alex Wellnitz"
 generate_feeds = true
 compile_sass = true
 minify_html = true
@@ -47,19 +47,6 @@ skip_prefixes = [
 skip_anchor_prefixes = [
     "https://github.com/",
 ]
-
-[languages.es]
-title = "~/tabi"
-description = "tabi es un tema accesible para Zola con búsqueda, soporte multilingüe, JavaScript opcional, una puntuación perfecta en Lighthouse y documentación exhaustiva. Diseñado para sitios web y blogs personales."
-generate_feeds = true
-taxonomies = [{name = "tags", feed = true}]
-build_search_index = true
-
-[languages.ca]
-title = "~/tabi"
-description = "tabi és un tema accessible per a Zola amb cerca, suport multilingüe, JavaScript opcional, una puntuació perfecta a Lighthouse i documentació exhaustiva. Dissenyat per a llocs web i blogs personals."
-generate_feeds = true
-taxonomies = [{name = "tags", feed = true}]
 
 [extra]
 # Check out the documentation (or the comments below) to learn how to customise tabi:
@@ -114,7 +101,7 @@ stylesheets = []
 # Remote repository for your Zola site.
 # Used for `show_remote_changes` and `show_remote_source` (see below).
 # Supports GitHub, GitLab, Gitea, and Codeberg.
-remote_repository_url = "https://github.com/welpo/tabi"
+remote_repository_url = "https://github.com/alexohneander/alexohneander-zola"
 # Set this to "auto" to try and auto-detect the platform based on the repository URL.
 # Accepted values are "github", "gitlab", "gitea", and "codeberg".
 remote_repository_git_platform = "auto"  # Defaults to "auto".
@@ -180,7 +167,7 @@ katex = false
 # Enable Mermaid diagrams for all posts.
 # Loads ~2.5MB of JavaScript.
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-mermaid = false
+mermaid = true
 
 # Serve Mermaid JavaScript locally. Version bundled with tabi.
 # If set to false, it will load the latest version from JSDelivr.
@@ -256,8 +243,7 @@ social_media_card = "index.jpg"
 
 menu = [
     { name = "blog", url = "blog", trailing_slash = true },
-    { name = "archive", url = "archive", trailing_slash = true },
-    { name = "tags", url = "tags", trailing_slash = true },
+    { name = "experience", url = "experience", trailing_slash = true },
     { name = "projects", url = "projects", trailing_slash = true },
 ]
 
@@ -273,7 +259,7 @@ full_content_in_feed = false
 # Protect against spambots:
 # 1. Use base64 for email (convert at https://www.base64encode.org/ or `printf 'your@email.com' | base64`).
 # 2. Or, set 'encode_plaintext_email' to true for auto-encoding (only protects on site, not in public repos).
-email = "dGFiaUBvc2MuZ2FyZGVu"
+email = "bW9pbkBhbGV4b2huZWFuZGVyLmRl"
 # Decoding requires ~400 bytes of JavaScript. If JS is disabled, the email won't be displayed.
 encode_plaintext_email = true  # Setting is ignored if email is already encoded.
 
@@ -281,11 +267,8 @@ encode_plaintext_email = true  # Setting is ignored if email is already encoded.
 # Built-in icons: https://github.com/welpo/tabi/tree/main/static/social_icons
 # To use a custom icon, add it to your site's `static/social_icons` directory.
 socials = [
-    { name = "github", url = "https://github.com/welpo/", icon = "github" },
-    { name = "soundcloud", url = "https://soundcloud.com/oskerwyld", icon = "soundcloud" },
-    { name = "instagram", url = "https://instagram.com/oskerwyld", icon = "instagram" },
-    { name = "youtube", url = "https://youtube.com/@oskerwyld", icon = "youtube" },
-    { name = "spotify", url = "https://open.spotify.com/artist/5Hv2bYBhMp1lUHFri06xkE", icon = "spotify" },
+    { name = "github", url = "https://github.com/alexohneander/", icon = "github" },
+    { name = "linkedin", url = "https://www.linkedin.com/in/alex-wellnitz/", icon = "linkedin" },
 ]
 
 # Fediverse profile.
@@ -297,7 +280,6 @@ socials = [
 footer_menu = [
     {url = "about", name = "about", trailing_slash = true},
     {url = "privacy", name = "privacy", trailing_slash = true},
-    {url = "https://tabi-stats.osc.garden", name = "site_statistics", trailing_slash = true},
     {url = "sitemap.xml", name = "sitemap", trailing_slash = false},
 ]
 
@@ -343,7 +325,7 @@ custom_subset = true
 [extra.analytics]
 # Specify which analytics service you want to use.
 # Supported options: ["goatcounter", "umami", "plausible"]
-service = "goatcounter"
+#service = "goatcounter"
 
 # Unique identifier for tracking.
 # For GoatCounter, this is the code you choose during signup.
@@ -357,13 +339,13 @@ service = "goatcounter"
 # For Umami: Base URL like "https://umami.example.com"
 # For Plausible: Base URL like "https://plausible.example.com"
 # Leave this field empty if you're using the service's default hosting.
-self_hosted_url = "https://tabi-stats.osc.garden"
+#self_hosted_url = "https://tabi-stats.osc.garden"
 
 # giscus support for comments. https://giscus.app
 # Setup instructions: https://welpo.github.io/tabi/blog/comments/#setup
 [extra.giscus]
 enabled_for_all_posts = false  # Enables giscus on all posts. It can be enabled on individual posts by setting `giscus = true` in the [extra] section of a post's front matter.
-automatic_loading = true  # If set to false, a "Load comments" button will be shown.
+automatic_loading = false  # If set to false, a "Load comments" button will be shown.
 repo = "welpo/tabi-comments"
 repo_id = "R_kgDOJ59Urw"  # Find this value in https://giscus.app/
 category = "Announcements"

@@ -3,7 +3,7 @@ title = "Latest posts"
 sort_by = "date"
 
 [extra]
-header = {title = "Hello! I'm tabi~", img = "img/main.webp", img_alt = "Óscar Fernández, the theme's author" }
+header = {title = "Hello! I'm Alex~", img = "img/main.webp", img_alt = "Alex Wellnitz" }
 section_path = "blog/_index.md"
 max_posts = 4
 projects_path = "projects/_index.md"
@@ -12,4 +12,4 @@ show_projects_first = false
 social_media_card = "index.jpg"
 +++
 
-tabi is an accessible [Zola](https://www.getzola.org) theme with [search](@/blog/mastering-tabi-settings/index.md#search), [multi-language support](@/blog/faq-languages/index.md), [optional JavaScript](@/blog/javascript/index.md), a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs.
+I'm Alex Wellnitz, a DevOps architect and software developer. I currently hold the role of DevOps Engineer at Materna, where I assist developers in accelerating web performance and provide guidance on various topics such as web development, Kubernetes, network security, and more.

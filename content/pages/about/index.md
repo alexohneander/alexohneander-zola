@@ -7,20 +7,14 @@ path = "about"
 quick_navigation_buttons = true
 +++
 
-Welcome to the demo of [**tabi**](https://github.com/welpo/tabi), a theme for [Zola](https://www.getzola.org/), a fast static site generator.
+I'm Alex Wellnitz, a DevOps architect and software developer with a passion for sharing knowledge and experience. As a seasoned professional, I've had the privilege of working in various roles, including my current position as a DevOps Engineer at Materna.
 
-**tabi** is the creation of Óscar Fernández ([welpo](https://github.com/welpo/) on GitHub), initially designed for [his personal site](https://osc.garden/). It is a feature-rich, modern theme that provides sane (and safe) defaults.
+With expertise in web development, Kubernetes, network security, and more, I'm committed to helping others accelerate their web performance and tackle complex technical challenges. You can find me sharing my insights on various topics through blog posts and articles.
 
-Looking for detailed instructions or tips on using **tabi**? The [blog](https://welpo.github.io/tabi/blog/) and [archive](https://welpo.github.io/tabi/archive/) sections feature the theme's documentation, offering a variety of articles from feature overviews to step-by-step guides.
+### What drives me?
 
-## Features
+My drive is fueled by a desire to learn, grow, and help others succeed in the ever-evolving landscape of technology. When I'm not working or writing, you can find me exploring new projects, experimenting with innovative tools, or simply enjoying the beauty of the digital world.
 
-**tabi** supports [multiple languages](https://welpo.github.io/tabi/blog/faq-languages/), [customisable appearance](https://welpo.github.io/tabi/blog/customise-tabi/), [comment integrations](https://welpo.github.io/tabi/blog/comments/), and much more, all with an emphasis on performance ([all JavaScript is optional](https://welpo.github.io/tabi/blog/javascript/)) and [security](https://welpo.github.io/tabi/blog/security/).
+### Let's connect!
 
-## Contributing
-
-Contributions are much appreciated! We appreciate bug reports, improvements to translations or documentation (however minor), feature requests… Check out the [Contributing Guidelines](https://github.com/welpo/tabi/blob/main/CONTRIBUTING.md) to learn how you can help. Thank you!
-
-## License
-
-The code is available under the [MIT license](https://choosealicense.com/licenses/mit/).
+If you have any questions, topics you'd like to discuss, or just want to say hello, please feel free to reach out.
