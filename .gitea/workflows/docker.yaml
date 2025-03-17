@@ -1,57 +1,11 @@
-# Inspired by:
-# https://blog.gitea.com/creating-go-actions/
-# https://gitea.com/Zettat123/test-simple-go-action/src/branch/main/.gitea/workflows/call-username.yml
-# https://gitea.com/actions/release-action
-# https://gitea.com/gitea/runner-images
-# https://github.com/vegardit/docker-gitea-act-runner
-# https://github.com/catthehacker/docker_images
-#
----
-# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: build-image
-run-name: ${{ gitea.actor }} is testing out Gitea Actions 🚀 🚀 🚀
-
-on:
-  push:
-    branches: ["main"]
-    paths:
-      - .gitea/workflows/build-image.yaml
+name: Build Docker Container
+run-name: ${{ gitea.actor }} is building container
+on: [push]
 
 jobs:
-  build-image:
-    name: build-image
+  Build-Container-Image:
     runs-on: ubuntu-latest
-
-    container:
-      # image: ghcr.io/catthehacker/ubuntu:act-latest
-      # image: gitea/runner-images:ubuntu-latest
-      image: ghcr.io/catthehacker/ubuntu:act-latest
-      # credentials:
-      #   username: ${{ gitea.actor }}
-      #   password: ${{ secrets.GA_TOKEN }}
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Install QEMU
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y qemu-user-static
-      #
-      # https://github.com/docker/metadata-action
-      #
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            gitea.example.com/xyz/alpine
-          tags: |
-            type=schedule,pattern={{date 'YYYYMMDDHHMM'}}
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=sha
       - name: Set up Docker Context for Buildx
         id: buildx-context
         run: |
@@ -68,6 +22,16 @@ jobs:
         with:
           # buildkitd-flags: --debug
           endpoint: builders
+        env:
+          DOCKER_HOST: "tcp://docker:2376/"
+          DOCKER_TLS_CERTDIR: "/certs"
+          DOCKER_TLS_VERIFY: 1
+          DOCKER_CERT_PATH: "/certs/client"
+      - name: Build and push the image
+        uses: docker/build-push-action@v5
+        with:
+          platforms: linux/amd64
+          context: containers/test
         env:
           DOCKER_HOST: "tcp://docker:2376/"
           DOCKER_TLS_CERTDIR: "/certs"
