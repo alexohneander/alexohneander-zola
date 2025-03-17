@@ -1,0 +1,9 @@
+name: Build Docker Container
+run-name: ${{ gitea.actor }} is building container
+on: [push]
+
+jobs:
+  Build-Container-Image:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker build -t alexohneander/alexohneander-zola:latest .
