@@ -6,6 +6,14 @@ jobs:
   Build-Container-Image:
     runs-on: ubuntu-latest
     steps:
-      - run: docker build -t alexohneander/alexohneander-zola:latest .
-        env:
-          DOCKER_HOST: unix:///var/run/docker/containerd/containerd.sock
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          target: basic
+          platforms: |
+            linux/amd64
+          # push: true
+          # tags: |
+          #   ${{ env.DOCKER_ORG }}/${{ steps.meta.outputs.REPO_NAME }}:${{ env.DOCKER_LATEST }}
