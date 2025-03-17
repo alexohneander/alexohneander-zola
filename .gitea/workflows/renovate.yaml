@@ -17,4 +17,4 @@ jobs:
         env:
           RENOVATE_CONFIG_FILE: ".gitea/workflows/config.js" # replace it with your config.js path
           LOG_LEVEL: "debug"
-          RENOVATE_TOKEN: ${{ secrets.GA_TOKEN }} # your Revonate bot token
+          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }} # your Revonate bot token
