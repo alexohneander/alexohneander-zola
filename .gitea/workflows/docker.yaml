@@ -7,3 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: docker build -t alexohneander/alexohneander-zola:latest .
+        env:
+          DOCKER_HOST: unix:///var/run/docker.sock #"tcp://127.0.0.1:2376"
