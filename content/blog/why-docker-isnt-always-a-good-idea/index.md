@@ -2,7 +2,7 @@
 title = "Why Docker isn't always a good idea Part 1"
 date = 2022-09-15
 updated = 2022-09-15
-description = "To briefly explain the situation. We have a **HAProxy** running on a Debian server as a Docker container. This is the entrance node to a **Docker Swarm** cluster."
+description = "To briefly explain the situation. We have a HAProxy running on a Debian server as a Docker container. This is the entrance node to a Docker Swarm cluster."
 
 [taxonomies]
 tags = ["docker", "network", "haproxy"]
