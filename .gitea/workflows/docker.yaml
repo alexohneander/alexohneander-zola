@@ -6,6 +6,19 @@ jobs:
   Build-Container-Image:
     runs-on: ubuntu-latest
     steps:
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            gitea.example.com/xyz/alpine
+          tags: |
+            type=schedule,pattern={{date 'YYYYMMDDHHMM'}}
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=sha
+
       - name: Set up Docker Context for Buildx
         id: buildx-context
         run: |
@@ -30,8 +43,7 @@ jobs:
       - name: Build and push the image
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./Dockerfile
+          file: Dockerfile
           platforms: linux/amd64
         env:
           DOCKER_HOST: "tcp://docker:2376/"
