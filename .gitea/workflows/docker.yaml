@@ -8,4 +8,4 @@ jobs:
     steps:
       - run: docker build -t alexohneander/alexohneander-zola:latest .
         env:
-          DOCKER_HOST: unix:///var/run/docker.sock #"tcp://127.0.0.1:2376"
+          DOCKER_HOST: unix:///var/run/docker/containerd/containerd.sock
