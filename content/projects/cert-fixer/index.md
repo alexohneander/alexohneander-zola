@@ -7,7 +7,7 @@ weight = 30
 tags = ["Rust", "Kubernetes", "CoreDNS", "BareMetal" ]
 
 [extra]
-local_image = "projects/rustysearch/doteki_logo.webp"
+local_image = "projects/cert-fixer/zutsu_logo.webp"
 social_media_card = "social_cards/projects_doteki.jpg"
 canonical_url = "https://alexohneander.de/projects/rustysearch/"
 add_src_to_code_block = true
