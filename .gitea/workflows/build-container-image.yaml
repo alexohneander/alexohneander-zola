@@ -53,10 +53,11 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
         env:
           DOCKER_HOST: "tcp://docker:2376/"
           DOCKER_TLS_CERTDIR: "/certs"
           DOCKER_TLS_VERIFY: 1
           DOCKER_CERT_PATH: "/certs/client"
+
