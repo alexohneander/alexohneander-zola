@@ -103,8 +103,7 @@
 
                 {# Shows "Powered by Zola & tabi" notice #}
                 {{ macros_translate::translate(key="powered_by", default="Powered by", language_strings=language_strings) }}
-                <a rel="{{ rel_attributes }}" {{ blank_target }} href="https://www.getzola.org">Zola</a>
-
+                  <a rel="{{ rel_attributes }}" {{ blank_target }} href="https://www.getzola.org">Zola</a> and running on real <a {{ blank_target }} href="/blog/use-real-servers-again">Servers</a>
                 {# Shows link to remote repository #}
                 {%- if config.extra.remote_repository_url and config.extra.show_remote_source | default(value=true) -%}
                 {{ separator }}
