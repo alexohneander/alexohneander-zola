@@ -2,7 +2,7 @@
 title = "Use real Servers again"
 date = 2025-03-18
 updated = 2025-03-18
-description = "In this tutorial I will try to explain you briefly and concisely how you can set up a site-to-site VPN for the Google Cloud Network."
+description = "Is the cloud really the ultimate solution? This post questions the current cloud-first mentality, arguing for a return to "real" servers and discussing the hidden costs, dependency, and political vulnerabilities of relying solely on the cloud."
 
 [taxonomies]
 tags = ["baremetal", "cloud", "google", "aws", "cloud"]
