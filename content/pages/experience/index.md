@@ -53,9 +53,19 @@ Agency for internet and design founded in 1998, established in Kastellaun in the
 
 ## Projects
 
+### DevOps Engineer, AEF AgIN Common-Connector
+
+The Common-Connector is being developed by the Agricultural Industry Electronics Foundation (AEF) as part of their Agricultural Interoperability Network (AgIN) initiative. In my role as a DevOps engineer, I supported the tender and contributed to the development of the MVP. Our team developed a Java Spring Boot application to facilitate seamless data exchange between platforms.
+
+- Conception and Development of a Dev Cluster based on AWS EKS (IaC)
+- Setting up build and deployment pipelines (GitLab)
+- Development of a test concept (Playwright, Testcontainers)
+- Development and integration of the operator pattern in a Java Spring Boot application
+- Development of the security pipelines (SonarQube, Mend, SAST)
+
 ### DevOps Engineer, Cofinity-X
 
-**since 2023**
+**until 2024**
 
 Cofinity-X is the first operator of the Catena-X network, connecting automotive partners at every level of the value chain. As a DevOps engineer, I was responsible for the enablement services.
 
@@ -85,3 +95,4 @@ Just right for your pharmacy! amamed is the only digital solution on the market 
 - Design and operation of Kubernetes clusters (3 locations)
 - Management of automated pipelines via Bitbucket Pipelines (continuous integration)
 - IT administration for 6 individuals (SysOps)
+
