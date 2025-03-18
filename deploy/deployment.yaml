@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alexohneander-zola-deployment
+  namespace: websites
+  labels:
+    app: alexohneander-zola
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alexohneander-zola
+  template:
+    metadata:
+      labels:
+        app: alexohneander-zola
+    spec:
+      containers:
+        - name: alexohneander-zola
+          image: git.dev-null.rocks/alexohneander/alexohneander-zola:sha-c1c1512
+          ports:
+            - containerPort: 80

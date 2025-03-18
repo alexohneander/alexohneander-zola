@@ -1,0 +1,59 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: alexohneander-zola-ingress
+  namespace: websites
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - alexohneander.de
+        - wellnitz-alex.de
+        - www.alexohneander.de
+        - www.wellnitz-alex.de
+      secretName: alexohneander-tls
+  rules:
+    - host: www.wellnitz-alex.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: alexohneander-zola-service
+                port:
+                  number: 80
+    - host: www.alexohneander.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: alexohneander-zola-service
+                port:
+                  number: 80
+    - host: wellnitz-alex.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: alexohneander-zola-service
+                port:
+                  number: 80
+    - host: alexohneander.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: alexohneander-zola-service
+                port:
+                  number: 80
