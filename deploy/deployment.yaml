@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: alexohneander-zola
-          image: git.dev-null.rocks/alexohneander/alexohneander-zola:sha-c1c1512
+          image: git.dev-null.rocks/alexohneander/alexohneander-zola:0.1.0
           ports:
             - containerPort: 80
