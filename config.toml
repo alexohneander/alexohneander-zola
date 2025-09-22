@@ -274,7 +274,7 @@ socials = [
 # Fediverse profile.
 # Adds metadata to feature the author's profile in Mastodon link previews.
 # Example: for @username@example.com, use:
-# fediverse_creator = { handle = "username", domain = "example.com" }
+fediverse_creator = { handle = "alexohneander", domain = "mastodon.dev-null.rocks" }
 
 # Extra menu to show on the footer, below socials section.
 footer_menu = [
